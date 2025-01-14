@@ -88,7 +88,21 @@ namespace stardewvalleyMod
             {
                 Game1.showGlobalMessage("hei pia");
             }
-        }using halla this is some shit code
+        }
+        
+
+        private void getHealthOverTimeInSauna(object? sender, WarpedEventArgs e)
+        {
+          if (e.NewLocation.Name == "Sauna" && Game1.player.health <= Game1.player.maxHealth - 50)
+          {
+            int milliseconds = 2000
+            while (Game1.player.health < Game1.player.maxHealth -20)
+            {
+              Game1.player.health += 20;
+              Thread.SLeep(millseconds)
+            }
+          }
+        }
 
 
 
@@ -166,12 +180,13 @@ namespace stardewvalleyMod
           if (e.NewLocation.Name = "Map")
             if (Game1.player.health <= Game1.player.maxHealth.Value - 50)
             {
-              while (Game1.player.halth <= Game1.player.maxHealth.Value -50)
+              while (Game1.player.halth <= Game1.player.maxHealth.Value -20)
                 {
                   int milliseconds = 2000;
                   Game1.player.health += 20;
                   Thread.Sleep(milliseconds);
                 }
+              break
             }
         }
 
