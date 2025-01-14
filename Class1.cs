@@ -102,7 +102,7 @@ namespace stardewvalleyMod
               Thread.SLeep(millseconds)
             }
           }
-        }poiojaspoijASDDPOIJasdpoijpoijpoijpoij
+        }
 
 
 
@@ -175,20 +175,6 @@ namespace stardewvalleyMod
 
         }
 
-        private void giveHealthInSauna(object? sender, WarpedEventArgs e)
-        {
-          if (e.NewLocation.Name = "Map")
-            if (Game1.player.health <= Game1.player.maxHealth.Value - 50)
-            {
-              while (Game1.player.halth <= Game1.player.maxHealth.Value -20)
-                {
-                  int milliseconds = 2000;
-                  Game1.player.health += 20;
-                  Thread.Sleep(milliseconds);
-                }
-              break
-            }
-        }
 
 
 
