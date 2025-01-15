@@ -201,6 +201,11 @@ namespace stardewvalleyMod
             }
         }
 
+        private void warpOnFarm(object? sender, WarpedEventArgs e)
+        {
+          if (e.NewLocation.Name = "Farm" && )
+        }
+
      
 
         //private void WeatherIsAlwaysRainy(object? sender, StardewModdingAPI.Events.DayStartedEventArgs e)
