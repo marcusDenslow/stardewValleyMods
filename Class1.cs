@@ -11,6 +11,10 @@ using System.Collections.Generic;
 using StardewValley.GameData.Shops;
 
 
+print("hello world")
+console.log("hello world")
+
+
 namespace stardewvalleyMod
 {
     /// <summary>The mod entry point.</summary>
@@ -203,7 +207,10 @@ namespace stardewvalleyMod
 
         private void warpOnFarm(object? sender, WarpedEventArgs e)
         {
-          if (e.NewLocation.Name = "Farm" && )
+          if (e.NewLocation.Name == "Farm")
+          {
+            Game1.showGlobalMessage($"Welcome back to the farm {Game1.player.Name}")
+          }
         }
 
      
