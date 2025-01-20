@@ -176,16 +176,19 @@ namespace stardewvalleyMod
         private void GreetMessageOnWarpFarm(object? sender, WarpedEventArgs e)
         {
             if (e.NewLocation.Name == "Farm" && Game1.timeOfDay >= 2000)
-                Game1.showGlobalMessage($"Welcome home {Game1.player.Name}");
-        }
-
-        private void HelloMsgInMap (object? sender, WarpedEventArgs e)
-        {
-            if (e.NewLocation.Name == "villmod_Map")
             {
-                Game1.showGlobalMessage($"welcome to the custom map {Game1.player.Name}");
+              if (Game1.isRaining)
+              {
+                Game1.showGlobalMessage($"Welcome home {Game1.player.name}. What a rainy day")
+              }
+              else
+              {                
+                Game1.showGlobalMessage($"Welcome home {Game1.player.name}")
+              }
             }
         }
+
+
 
         private void givestaminaandhealthonwarptown(object? sender, WarpedEventArgs e)
         {
