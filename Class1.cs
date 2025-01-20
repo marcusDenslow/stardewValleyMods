@@ -93,6 +93,29 @@ namespace stardewvalleyMod
                 Game1.showGlobalMessage("hei pia");
             }
         }
+
+
+
+       private void RemindPlayerOfSeasonalCrops(object? sender, DayStartedEventArgs e)
+       {
+         if (Game1.currentSeason == "fall")
+         {
+           Game1.showGlobalMessage("It's fall. Don't forget to buy the seasonal Items")
+         }
+         else if (Game1.currentSeason == "summer")
+         {
+           Game1.showGlobalMessage("It's summer. Don't forget to buy the seasonal Items")
+         }
+         else if (Game1.currentSeason == "winter")
+         {
+           Game1.showGlobalMessage("It's winter. Don't forget to buy the seasonal Items")
+         }
+          else if (Game1.currentSeason == "spring")
+         {
+           Game1.showGlobalMessage("It's spring. Don't forget to buy the seasonal Items")
+         }
+       
+       }
         
 
         private void getHealthOverTimeInSauna(object? sender, WarpedEventArgs e)
