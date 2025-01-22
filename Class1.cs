@@ -1,5 +1,4 @@
-﻿string halla
-using System;
+﻿using System;
 using System.Threading;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
