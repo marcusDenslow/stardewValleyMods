@@ -11,8 +11,6 @@ using System.Collections.Generic;
 using StardewValley.GameData.Shops;
 
 
-print("hello world")
-console.log("hello world")
 
 
 namespace stardewvalleyMod
@@ -134,6 +132,7 @@ namespace stardewvalleyMod
 
 
 
+        console.log("hello world")
         private void GiveGold(object? sender, ButtonPressedEventArgs e)
         {
             if (e.Button == SButton.G)
