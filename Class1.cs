@@ -132,7 +132,6 @@ namespace stardewvalleyMod
 
 
 
-        console.log("hello world")
         private void GiveGold(object? sender, ButtonPressedEventArgs e)
         {
             if (e.Button == SButton.G)
