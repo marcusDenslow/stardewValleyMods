@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using StardewValley.GameData.Shops;
 
 
+print("hello world")
+console.log("hello world")
 
 
 namespace stardewvalleyMod
@@ -181,7 +183,7 @@ namespace stardewvalleyMod
               }
               else
               {                
-                Game1.showGlobalMessage($"Welcome home {Game1.player.name}")
+                Game1.showGlobalMessage($"Welcome home {Game1.player.name}. What a rainy day")
               }
             }
         }
