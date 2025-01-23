@@ -11,9 +11,6 @@ using System.Collections.Generic;
 using StardewValley.GameData.Shops;
 
 
-print("hello world")
-console.log("hello world")
-
 
 namespace stardewvalleyMod
 {
