@@ -14,7 +14,6 @@ using StardewValley.GameData.Shops;
 
 
 namespace stardewvalleyMod
-namespace stardewvalleyMod
 {
     /// <summary>The mod entry point.</summary>
     internal sealed class ModEntry : Mod
