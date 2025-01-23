@@ -129,14 +129,14 @@ namespace stardewvalleyMod
 
 
 
-        private void HelperWateredCrops(object? sender, EventArgs e)
+        private void helpWateringCrops(object? sender, EventArgs e)
         {
-          foreach (var terrainFeature in Game1.getFarm().terrainFeatures.Pairs)
+          foreach (var terrainfeature in Game1.getFarm().terrainfeature.Pairs)
           {
-            if (terrainFeature.Value is HoeDirt dirt && dirt.crop != null && dirt.state.Value == HoeDirt.dry)
+            if (terrainfeature.Value is HoeDirt dirt && dirt.crop != null && dirt.state.Value == HoeDirt.dry)
               dirt.state.Value = HoeDirt.watered;
           }
-            Game1.addHUDMessage(new HUDMessage("Helper Watered Crops!", HUDMessage.newQuest_type));
+            Game1.showGlobalMessage("the automatic watering system watered your crops!");
             DelayedAction.playSoundAfterDelay("wateringCan", 1500);
         }
 
@@ -153,7 +153,7 @@ namespace stardewvalleyMod
               }
               else
               {                
-                Game1.showGlobalMessage($"Welcome home {Game1.player.name}. What a rainy day")
+                Game1.showGlobalMessage($"Welcome home {Game1.player.name}")
               }
             }
         }
