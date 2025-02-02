@@ -233,12 +233,14 @@ namespace stardewvalleyMod
                     var seedShop = shopData["SeedShop"];
                     var wheatShopEntry = seedShop.Items.Find(entry => entry.Id == "WheatSeeds_Summer");
                     var sunFlowerShopEntry = seedShop.Items.Find(entry => entry.Id == "SunflowerSeeds_Summer");
+                    var strawberryShopEntry = seedShop.Items.Find(entry => entry.Id == "StrawberrySeeds_summer");
 
-                    if (wheatShopEntry is not null && sunFlowerShopEntry is not null)
+                    if (wheatShopEntry is not null && sunFlowerShopEntry is not null && strawberryShopEntry is not null)
                     {
                         // Remove the condition that limits this entry to summer
                         wheatShopEntry.Condition = null;
                         sunFlowerShopEntry.Condition = null;
+                        strawberryShopEntry.Condition = null;
                     }
                 });
             }
