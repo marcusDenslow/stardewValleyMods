@@ -94,6 +94,12 @@ namespace stardewvalleyMod
             }
         }
 
+        private void GreetRainyDay(object? sender, DayStartedEventArgs e){
+          if (Game1.timeOfDay == 600 && Game1.isRaining){
+            Game1.showGlobalMessage("It's a raniy morning. Be sure to collect your crops!")
+          }
+        }
+
 
 
        private void RemindPlayerOfSeasonalCrops(object? sender, DayStartedEventArgs e)
