@@ -11,9 +11,6 @@ using System.Collections.Generic;
 using StardewValley.GameData.Shops;
 
 
-print("hello world")
-console.log("hello world")
-
 
 namespace stardewvalleyMod
 {
@@ -50,41 +47,7 @@ namespace stardewvalleyMod
 
 
 
-        //private void OnButtonPressed(object? sender, ButtonPressedEventArgs e)
-        //{
-        //    // ignore if player hasn't loaded a save yet
-        //    if (!Context.IsWorldReady)
-        //        return;
 
-        //    // print button presses to the console window
-        //    this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
-        //}
-
-        //private void PiaErCute(object? sender, ButtonPressedEventArgs e)
-        //{
-        //    if (!Context.IsWorldReady)
-        //        return;
-        //    this.Monitor.Log("du er søt pia", LogLevel.Debug);
-        //}
-
-        //private void gratulererNatalie(object? sender, ButtonPressedEventArgs e)
-        //{
-        //    if (!Context.IsWorldReady)
-        //        return;
-        //    this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}. -NOTE FRA DEV gratulerer med dagen natalie");
-        //}
-
-        private void SetTimeNight(object? sender, TimeChangedEventArgs e)
-        {
-            this.Monitor.Log($"{Game1.timeOfDay}", LogLevel.Debug);
-        }
-
-
-        private void LogStamina(object? sender, TimeChangedEventArgs e)
-        {
-            this.Monitor.Log($"{Game1.player.stamina}", LogLevel.Debug);
-            this.Monitor.Log($"{Game1.player.health}", LogLevel.Debug);
-        }
 
         private void HeiPiaHudMessage(object? sender, TimeChangedEventArgs e)
         {
@@ -128,7 +91,7 @@ namespace stardewvalleyMod
         {
           if (e.NewLocation.Name == "Sauna" && Game1.player.health <= Game1.player.maxHealth - 50)
           {
-            int milliseconds = 2000
+            int milliseconds = 2000;
             while (Game1.player.health < Game1.player.maxHealth -20)
             {
               Game1.player.health += 20;
@@ -162,22 +125,29 @@ namespace stardewvalleyMod
 
         }
 
-        private void HelperWateredCrops(object? sender, EventArgs e)
-        {
-          foreach (var terrainFeature in Game1.getFarm().terrainFeatures.Pairs)
-          {
-            if (terrainFeature.Value is HoeDirt dirt && dirt.crop != null && dirt.state.Value == HoeDirt.dry)
-              dirt.state.Value = HoeDirt.watered;
-          }
-            Game1.addHUDMessage(new HUDMessage("Helper Watered Crops!", HUDMessage.newQuest_type));
-            DelayedAction.playSoundAfterDelay("wateringCan", 1500);
-        }
+
 
         private void RemoveGold(object? sender, ButtonPressedEventArgs e)
         {
             if (e.Button == SButton.H)
                 Game1.player.Money -= 1000;
         }
+
+
+
+        private void helpWateringCrops(object? sender, EventArgs e)
+        {
+          foreach (var terrainfeature in Game1.getFarm().terrainfeature.Pairs)
+          {
+            if (terrainfeature.Value is HoeDirt dirt && dirt.crop != null && dirt.state.Value == HoeDirt.dry)
+              dirt.state.Value = HoeDirt.watered;
+          }
+            Game1.showGlobalMessage("the automatic watering system watered your crops!");
+            DelayedAction.playSoundAfterDelay("wateringCan", 1500);
+        }
+
+
+
 
         private void GreetMessageOnWarpFarm(object? sender, WarpedEventArgs e)
         {
