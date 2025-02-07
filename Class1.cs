@@ -188,6 +188,7 @@ namespace stardewvalleyMod
         {
             Game1.timeOfDay = 1000;
             Game1.currentSeason = "fall";
+            Game1.Israining;
         }
 
 
