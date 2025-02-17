@@ -125,6 +125,10 @@ namespace stardewvalleyMod
 
         }
 
+        private void greeting(object? sender, DayStartedEventArgs e){
+          if (Game1.isRaining) && (Game1.timeOfDay == 700){
+            showGlobalMessage($"Good morning {Game1.player.name}, what a rainy day!")
+          }
 
 
         private void RemoveGold(object? sender, ButtonPressedEventArgs e)
