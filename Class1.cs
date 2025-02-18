@@ -51,9 +51,10 @@ namespace stardewvalleyMod
 
         private void HeiPiaHudMessage(object? sender, TimeChangedEventArgs e)
         {
-            if (Game1.timeOfDay == 600)
+            if (Game1.timeOfDay == 700)
             {
-                Game1.showGlobalMessage("hei pia");
+                Game1.showGlobalMessage("hei pia, du er søt!");
+                
             }
         }
 
